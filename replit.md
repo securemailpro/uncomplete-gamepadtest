@@ -145,6 +145,15 @@ export const metadata: Metadata = {
 
 ## Recent Changes
 
+### November 29, 2025 - PageSpeed Optimization (90+ Score Target)
+- Converted HomeContent from client to server component (reduces JS bundle from 4.08 kB to 175 B)
+- Split Header into server component with separate MobileMenu client component
+- Added dynamic imports with `ssr: false` for RecommendedProductsSection in all tester pages
+- Optimized next.config.mjs with DNS prefetch, cache headers, and lucide-react transpile
+- Deferred Google Analytics to lazyOnload strategy for faster initial paint
+- Added Link prefetch optimization for faster navigation
+- Reduced tester page bundles: gamepad (9.54→6.87 kB), GPU (7.18→4.22 kB)
+
 ### November 29, 2025 - Dependency Optimization
 - Removed 100+ unused packages while preserving all animations
 - Removed unused npm dependencies: framer-motion, recharts, embla-carousel, vaul, cmdk, input-otp, react-day-picker, react-resizable-panels, @tanstack/react-query, sonner
