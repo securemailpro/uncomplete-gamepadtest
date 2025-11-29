@@ -49,9 +49,6 @@
   "exclude": [
     "node_modules",
     "dist",
-    ".next",
-    "client",
-    "server",
-    "shared"
+    ".next"
   ]
 }

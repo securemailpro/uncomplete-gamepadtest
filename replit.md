@@ -41,7 +41,7 @@ A modern hardware testing web application built with Next.js 14 App Router, feat
 │   ├── privacy/            # Privacy Policy page (server component)
 │   ├── blog/               # Blog page (server component)
 │   └── contact/            # Contact page (server component)
-├── client/                 # Legacy Vite/React code (preserved for reference)
+├── public/                 # Static assets
 ├── next.config.mjs         # Next.js configuration
 ├── tailwind.config.ts      # Tailwind CSS configuration
 ├── tsconfig.json           # TypeScript configuration for Next.js
@@ -144,6 +144,13 @@ export const metadata: Metadata = {
 ```
 
 ## Recent Changes
+
+### November 29, 2025 - Code Cleanup
+- Removed unused legacy code from previous Vite/React setup (client/, server/, api/, netlify/)
+- Fixed React hydration errors by using Next.js Script component for analytics
+- Fixed QueryClient SSR issue in Providers component
+- Cleaned up tsconfig.json and removed unused config files
+- Optimized performance by removing duplicate code
 
 ### November 28, 2025 - Next.js 14 Migration
 - Migrated from React/Vite to Next.js 14 with App Router

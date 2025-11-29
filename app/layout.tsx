@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Header } from '@/app/components/Header';
 import { Footer } from '@/app/components/Footer';
@@ -97,7 +98,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script
+        <Script
+          id="gtag-base"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-JQMTTRYZSK"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -107,12 +115,10 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JQMTTRYZSK"
-        />
-        <script
+        <Script
+          id="schema-org"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
