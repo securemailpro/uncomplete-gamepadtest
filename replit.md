@@ -145,6 +145,14 @@ export const metadata: Metadata = {
 
 ## Recent Changes
 
+### November 29, 2025 - Performance & Mobile Optimization
+- Optimized homepage for faster loading - removed scroll animations that delayed content visibility
+- Made "Choose Your Testing Tool" section visible immediately on page load
+- Improved mobile responsiveness with 2-column grid for testing tools on small screens
+- Added responsive text sizes and padding for better mobile experience
+- Hidden verbose descriptions on mobile to reduce clutter
+- Reduced client-side JavaScript by removing scroll animation hooks
+
 ### November 29, 2025 - Code Cleanup
 - Removed unused legacy code from previous Vite/React setup (client/, server/, api/, netlify/)
 - Fixed React hydration errors by using Next.js Script component for analytics
