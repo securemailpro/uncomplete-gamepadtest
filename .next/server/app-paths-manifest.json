@@ -1,5 +1,7 @@
 {
-  "/mic-tester/page": "app/mic-tester/page.js",
+  "/midi-tester/page": "app/midi-tester/page.js",
   "/api/image-proxy/route": "app/api/image-proxy/route.js",
-  "/midi-tester/page": "app/midi-tester/page.js"
+  "/gpu-tester/page": "app/gpu-tester/page.js",
+  "/mic-tester/page": "app/mic-tester/page.js",
+  "/gamepad-tester/page": "app/gamepad-tester/page.js"
 }
