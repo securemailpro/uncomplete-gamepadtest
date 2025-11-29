@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Monitor, Zap, Info, Play } from "lucide-react";
 import {
   Card,
@@ -13,7 +14,11 @@ import {
 import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
 import { Progress } from "@/app/components/ui/progress";
-import { RecommendedProductsSection } from "@/app/components/RecommendedProducts";
+
+const RecommendedProductsSection = dynamic(
+  () => import("@/app/components/RecommendedProducts").then(mod => mod.RecommendedProductsSection),
+  { ssr: false }
+);
 
 interface GPUInfo {
   vendor: string;

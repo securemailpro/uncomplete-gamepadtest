@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Music, Piano, Activity } from "lucide-react";
 import {
   Card,
@@ -12,7 +13,11 @@ import {
 } from "@/app/components/ui/card";
 import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
-import { RecommendedProductsSection } from "@/app/components/RecommendedProducts";
+
+const RecommendedProductsSection = dynamic(
+  () => import("@/app/components/RecommendedProducts").then(mod => mod.RecommendedProductsSection),
+  { ssr: false }
+);
 
 interface MIDIDeviceInfo {
   id: string;

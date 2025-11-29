@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/gamepad-tester/GamepadTesterClient.tsx -> @/app/components/RecommendedProducts\":{\"id\":\"app/gamepad-tester/GamepadTesterClient.tsx -> @/app/components/RecommendedProducts\",\"files\":[\"static/chunks/_app-pages-browser_app_components_RecommendedProducts_tsx.js\"]}}"

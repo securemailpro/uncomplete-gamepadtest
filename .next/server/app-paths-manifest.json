@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/gamepad-tester/page": "app/gamepad-tester/page.js",
-  "/api/image-proxy/route": "app/api/image-proxy/route.js"
+  "/gamepad-tester/page": "app/gamepad-tester/page.js"
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Gamepad2, Zap, CheckCircle } from "lucide-react";
 import {
   Card,
@@ -14,7 +15,11 @@ import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
 import { Progress } from "@/app/components/ui/progress";
 import { cn } from "@/app/lib/utils";
-import { RecommendedProductsSection } from "@/app/components/RecommendedProducts";
+
+const RecommendedProductsSection = dynamic(
+  () => import("@/app/components/RecommendedProducts").then(mod => mod.RecommendedProductsSection),
+  { ssr: false }
+);
 
 interface GamepadState {
   connected: boolean;

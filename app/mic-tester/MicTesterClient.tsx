@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Mic, MicOff, Volume2, RotateCcw, Activity, ClipboardCheck } from "lucide-react";
 import {
   Card,
@@ -13,7 +14,11 @@ import {
 import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
 import { Slider } from "@/app/components/ui/slider";
-import { RecommendedProductsSection } from "@/app/components/RecommendedProducts";
+
+const RecommendedProductsSection = dynamic(
+  () => import("@/app/components/RecommendedProducts").then(mod => mod.RecommendedProductsSection),
+  { ssr: false }
+);
 
 interface AudioStats {
   level: number;
