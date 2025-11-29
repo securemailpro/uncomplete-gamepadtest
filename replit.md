@@ -8,8 +8,8 @@ A modern hardware testing web application built with Next.js 14 App Router, feat
 ### Technology Stack
 - **Framework**: Next.js 14 with App Router
 - **Frontend**: React 18 with TypeScript
-- **Styling**: TailwindCSS with shadcn/ui components
-- **State Management**: TanStack Query
+- **Styling**: TailwindCSS with shadcn/ui components (optimized subset)
+- **Animations**: Pure CSS @keyframes animations (no JavaScript animation libraries)
 
 ### Project Structure
 ```
@@ -18,10 +18,10 @@ A modern hardware testing web application built with Next.js 14 App Router, feat
 │   ├── page.tsx            # Homepage (server component)
 │   ├── globals.css         # Global styles
 │   ├── components/         # Shared components
-│   │   ├── ui/             # shadcn/ui components
+│   │   ├── ui/             # shadcn/ui components (button, card, badge, progress, slider, tooltip)
 │   │   ├── Header.tsx      # Navigation header
 │   │   ├── Footer.tsx      # Site footer
-│   │   ├── Providers.tsx   # Client-side providers (Theme, Query)
+│   │   ├── Providers.tsx   # Client-side providers (Theme, Tooltip)
 │   │   └── ...
 │   ├── hooks/              # Custom React hooks
 │   ├── lib/                # Utility functions
@@ -144,6 +144,16 @@ export const metadata: Metadata = {
 ```
 
 ## Recent Changes
+
+### November 29, 2025 - Dependency Optimization
+- Removed 100+ unused packages while preserving all animations
+- Removed unused npm dependencies: framer-motion, recharts, embla-carousel, vaul, cmdk, input-otp, react-day-picker, react-resizable-panels, @tanstack/react-query, sonner
+- Removed 22 unused Radix UI component packages
+- Deleted 40+ unused UI component files (keeping only button, card, badge, progress, slider, tooltip)
+- Simplified Providers.tsx by removing QueryClientProvider and Toast
+- Package count reduced from 344 to 241 (30% reduction)
+- Direct dependencies reduced from 43 to 24 (44% reduction)
+- All CSS animations preserved (using @keyframes in globals.css)
 
 ### November 29, 2025 - Performance & Mobile Optimization
 - Optimized homepage for faster loading - removed scroll animations that delayed content visibility
