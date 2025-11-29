@@ -1,25 +1,15 @@
 {
   "pages": {
-    "/mic-tester/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/mic-tester/page.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/midi-tester/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/midi-tester/page.js"
-    ],
-    "/gpu-tester/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/gpu-tester/page.js"
     ],
     "/gamepad-tester/page": [
       "static/chunks/webpack.js",
